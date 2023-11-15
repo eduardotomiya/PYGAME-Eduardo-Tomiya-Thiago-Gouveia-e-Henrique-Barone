@@ -29,8 +29,31 @@ cloud = pygame.image.load(os.path.join("Assets/Other","Cloud.png"))
 
 bg = pygame.image.load(os.path.join("Assets/Other","Track.png"))
 
+#altura e largura do personagem
+class Dinosaur:
+    x_pos=80
+    y_pos=310
+
+    
+    def init(self):
+        self.duck_img=duck
+        self.run_img=RUNNing
+        self.jump_img=jump
+        
 def main():
     run = True
     clock = pygame.time.Clock()
+    #completar com o personagem
+    player= ()
     while run:
-        
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                run = False
+        screen.fill((255,255,255))
+        userInput=pygame.key.get_pressed()
+
+        player.draw(screen)
+        player.update(userInput)
+
+        clock.tick(30)
+        pygame.display.update()
