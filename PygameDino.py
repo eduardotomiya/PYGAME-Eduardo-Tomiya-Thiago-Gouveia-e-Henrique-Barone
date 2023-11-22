@@ -5,7 +5,7 @@ import os
 
 pygame.init()
 
-display_y = 600
+display_y = 
 display_x = 1100
 screen = pygame.display.set_mode((display_y, display_x))
 
